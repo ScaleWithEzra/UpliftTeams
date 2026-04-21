@@ -53,21 +53,18 @@
     .page { max-width: 480px; margin: 0 auto; overflow-x: hidden; }
     .hero-wave-wrap {
       overflow: hidden;
-      height: 230px;
       /* Break out of the 480px max-width column — span full viewport */
       width: 100vw;
       position: relative;
       left: 50%;
       transform: translateX(-50%);
       background: var(--bg);
+      line-height: 0;          /* remove inline-image gap */
     }
     .hero-wave {
-      position: absolute;
-      top: 0; left: 0;
+      display: block;
       width: 100%;
-      height: 100%;           /* always fill the container */
-      object-fit: cover;
-      object-position: bottom center; /* anchor wave content, which sits at base of original image */
+      height: auto;            /* natural aspect ratio — same look at every width */
       transform: scaleY(-1);
       pointer-events: none;
     }
@@ -186,7 +183,6 @@
       .logo-ticker__mask { overflow-x: auto; }
     }
     @media (max-width: 520px) {
-      .hero-wave-wrap { height: 200px; }
       .logo-ticker { --ticker-height: 78px; --logo-max-height: 36px; --tile-width: 140px; --gap: 12px; --speed: 24s; }
       .logo-ticker__item--wide { width: 190px; }
       .logo-ticker__item--clark { width: 125px; }
