@@ -42,7 +42,7 @@
     .page { max-width: 480px; margin: 0 auto; overflow-x: hidden; }
     .hero-wave-wrap {
       overflow: hidden;
-      height: 130px;
+      height: 180px;
       position: relative;
       background: var(--bg);
     }
@@ -53,37 +53,37 @@
       transform: scaleY(-1);
       pointer-events: none;
     }
-    .page-inner { padding: 0 20px; }
+    .page-inner { padding: 0 24px; }
 
     /* ── Profile ── */
-    .profile { text-align: center; margin-bottom: 24px; }
+    .profile { text-align: center; margin-bottom: 28px; }
     .avatar-wrap {
-      width: 80px; height: 80px;
-      border-radius: 18px;
-      margin: 0 auto 16px;
+      width: 96px; height: 96px;
+      border-radius: 22px;
+      margin: 0 auto 20px;
       overflow: hidden;
       background: var(--surface);
       display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 2px 16px rgba(29,61,81,0.12);
+      box-shadow: 0 4px 24px rgba(29,61,81,0.14);
       border: 1px solid rgba(29,61,81,0.08);
     }
-    .avatar-img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 8px; }
+    .avatar-img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 10px; }
     .brand-name {
       font-family: 'Lora', serif;
-      font-size: 26px; font-weight: 700;
-      letter-spacing: -0.3px; color: var(--primary);
-      margin-bottom: 5px;
+      font-size: 30px; font-weight: 700;
+      letter-spacing: -0.4px; color: var(--primary);
+      margin-bottom: 6px;
     }
     .brand-tagline {
       font-family: 'Lora', serif;
       font-style: italic;
-      font-size: 14px; color: var(--muted);
-      margin-bottom: 8px;
+      font-size: 15px; color: var(--muted);
+      margin-bottom: 10px;
     }
     .brand-sub {
-      font-size: 13px; color: var(--muted);
-      max-width: 300px; margin: 0 auto;
-      line-height: 1.6; font-weight: 400;
+      font-size: 14px; color: var(--muted);
+      max-width: 320px; margin: 0 auto;
+      line-height: 1.65; font-weight: 400;
     }
 
     /* ── Social proof ── */
@@ -91,13 +91,13 @@
       display: flex; align-items: center; justify-content: center;
       gap: 7px; margin-bottom: 28px; flex-wrap: wrap;
     }
-    .sp-stars-img { height: 18px; width: auto; display: block; }
+    .sp-stars-img { height: 22px; width: auto; display: block; }
     .sp-badge {
-      font-size: 11px; font-weight: 700;
+      font-size: 12px; font-weight: 700;
       color: var(--muted);
       background: var(--surface);
       border: 1px solid rgba(102,95,85,0.18);
-      padding: 3px 10px; border-radius: 100px;
+      padding: 4px 12px; border-radius: 100px;
     }
     .sp-dot { color: rgba(102,95,85,0.3); font-size: 10px; }
 
@@ -168,6 +168,7 @@
       .logo-ticker__mask { overflow-x: auto; }
     }
     @media (max-width: 520px) {
+      .hero-wave-wrap { height: 160px; }
       .logo-ticker { --ticker-height: 78px; --logo-max-height: 36px; --tile-width: 140px; --gap: 12px; --speed: 24s; }
       .logo-ticker__item--wide { width: 190px; }
       .logo-ticker__item--clark { width: 125px; }
