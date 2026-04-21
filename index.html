@@ -54,27 +54,15 @@
     /* ── Banner ── */
     .banner {
       width: 100%;
-      overflow: hidden;
-      line-height: 0;
-      background: var(--bg);
-      margin: 0;
-      padding: 0;
-      height: 100px;              /* mobile */
-    }
-    .banner img {
-      display: block;
-      width: 100%;
-      height: auto;
-      pointer-events: none;
-      margin-top: -8%;            /* crop the transparent top off */
+      height: 90px;
+      background: url('Border7.png') center bottom / 100% auto no-repeat;
+      background-color: var(--bg);
     }
     @media (min-width: 600px) {
-      .banner { height: 120px; }  /* tablet */
-      .banner img { margin-top: -6%; }
+      .banner { height: 110px; }
     }
     @media (min-width: 900px) {
-      .banner { height: 140px; }  /* desktop */
-      .banner img { margin-top: -4%; }
+      .banner { height: 130px; }
     }
     .page-inner { padding: 32px 24px 0; }
 
@@ -393,9 +381,7 @@
 <body>
 
 <!-- ── Banner ── -->
-<div class="banner">
-  <img src="Border7.png" alt="" aria-hidden="true"/>
-</div>
+<div class="banner"></div>
 
 <div class="page">
 <div class="page-inner">
