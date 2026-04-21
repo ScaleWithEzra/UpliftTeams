@@ -51,23 +51,19 @@
       overflow-x: hidden;
     }
     .page { max-width: 480px; margin: 0 auto; overflow-x: hidden; }
-    .hero-wave-wrap {
-      overflow: hidden;
-      max-height: 200px;       /* clip the empty space below the wave */
-      /* Break out of the 480px max-width column — span full viewport */
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--bg);
+    /* ── Banner ── */
+    .banner {
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 10;
       line-height: 0;
+      background: var(--bg);
     }
-    .hero-wave {
+    .banner img {
       display: block;
       width: 100%;
-      height: auto;            /* scales with viewport width, keeps proportions */
-      transform: scaleY(-1);
-      transform-origin: top center; /* flip from top edge so wave stays pinned to top */
+      height: auto;
       pointer-events: none;
     }
     .page-inner { padding: 32px 24px 0; }
@@ -386,9 +382,9 @@
 </head>
 <body>
 
-<!-- ── Hero wave (cropped flush to top) ── -->
-<div class="hero-wave-wrap">
-  <img class="hero-wave" src="Border7.png" alt="" aria-hidden="true"/>
+<!-- ── Banner ── -->
+<div class="banner">
+  <img src="Border7.png" alt="" aria-hidden="true"/>
 </div>
 
 <div class="page">
