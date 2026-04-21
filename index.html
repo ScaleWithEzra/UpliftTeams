@@ -54,20 +54,27 @@
     /* ── Banner ── */
     .banner {
       width: 100%;
-      height: 80px;
       overflow: hidden;
       line-height: 0;
       background: var(--bg);
       margin: 0;
       padding: 0;
+      height: 100px;              /* mobile */
     }
     .banner img {
       display: block;
       width: 100%;
-      height: 300%;
-      object-fit: cover;
-      object-position: center 58%;
+      height: auto;
       pointer-events: none;
+      margin-top: -8%;            /* crop the transparent top off */
+    }
+    @media (min-width: 600px) {
+      .banner { height: 120px; }  /* tablet */
+      .banner img { margin-top: -6%; }
+    }
+    @media (min-width: 900px) {
+      .banner { height: 140px; }  /* desktop */
+      .banner img { margin-top: -4%; }
     }
     .page-inner { padding: 32px 24px 0; }
 
