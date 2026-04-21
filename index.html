@@ -53,19 +53,21 @@
     .page { max-width: 480px; margin: 0 auto; overflow-x: hidden; }
     .hero-wave-wrap {
       overflow: hidden;
+      max-height: 200px;       /* clip the empty space below the wave */
       /* Break out of the 480px max-width column — span full viewport */
       width: 100vw;
       position: relative;
       left: 50%;
       transform: translateX(-50%);
       background: var(--bg);
-      line-height: 0;          /* remove inline-image gap */
+      line-height: 0;
     }
     .hero-wave {
       display: block;
       width: 100%;
-      height: auto;            /* natural aspect ratio — same look at every width */
+      height: auto;            /* scales with viewport width, keeps proportions */
       transform: scaleY(-1);
+      transform-origin: top center; /* flip from top edge so wave stays pinned to top */
       pointer-events: none;
     }
     .page-inner { padding: 32px 24px 0; }
